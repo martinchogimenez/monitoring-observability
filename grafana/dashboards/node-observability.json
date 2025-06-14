@@ -1,0 +1,60 @@
+{
+  "id": null,
+  "title": "Node.js Observability",
+  "timezone": "browser",
+  "editable": true,
+  "panels": [
+    {
+      "type": "stat",
+      "title": "Total HTTP Requests",
+      "targets": [
+        {
+          "expr": "http_requests_total",
+          "interval": "",
+          "legendFormat": "",
+          "refId": "A"
+        }
+      ],
+      "gridPos": {
+        "h": 4,
+        "w": 8,
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "type": "stat",
+      "title": "Errores HTTP 500",
+      "targets": [
+        {
+          "expr": "http_errors_total",
+          "refId": "B"
+        }
+      ],
+      "gridPos": {
+        "h": 4,
+        "w": 8,
+        "x": 8,
+        "y": 0
+      }
+    },
+    {
+      "type": "graph",
+      "title": "Tiempos de respuesta",
+      "targets": [
+        {
+          "expr": "rate(http_response_time_seconds_bucket[1m])",
+          "refId": "C"
+        }
+      ],
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 4
+      }
+    }
+  ],
+  "schemaVersion": 36,
+  "version": 1
+}

@@ -1,0 +1,4 @@
+# Grafana-generated files
+grafana/data/
+grafana/plugins/
+grafana/grafana.db
